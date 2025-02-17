@@ -79,3 +79,13 @@ function calculateLoanPayment(principal, rate, time) {
 console.log(`Task 5 part 1- Total Payment: $${calculateLoanPayment(1000, 0.05, 2).toFixed(2)}`);  
 console.log(`Task 5 part 2- Total Payment: $${calculateLoanPayment(5000, 0.07, 3).toFixed(2)}`);
 //logged the total payment   
+
+//task 6
+let transactions = [200, 1500, 3200, 800, 2500];
+
+const filterLargeTransactions = (transactions, filterFunction) => {
+    return transactions.filter(filterFunction);
+};
+//created a function that retunrs transactions using filter method
+console.log("Task 6 - Transactions:", filterLargeTransactions(transactions, amount => amount > 1000));
+//logged results  
