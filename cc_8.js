@@ -104,3 +104,16 @@ let cart = createCartTracker();
 cart(20);
 cart(35); 
 //logged the results 
+
+
+//part 8
+function calculateSavings(years, amount) {
+    if (years >= 10) {
+        return amount;
+    }
+    return calculateSavings(years + 1, amount * 1.05);
+}
+//made a function that calculated savings by increasing 5% until they reach 10 years 
+console.log(`Task 8 Part 1- Projected Savings: $${calculateSavings(8, 1000).toFixed(2)}`);
+console.log(`Task 8 Part 2- Projected Savings: $${calculateSavings(5, 5000).toFixed(2)}`);
+//logged the projected savings 
