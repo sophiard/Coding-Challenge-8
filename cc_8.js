@@ -44,3 +44,29 @@ let calculateDiscount = function(price, discountRate) {
 console.log(`Task 3 Part 1- Service Fee: $${calculateServiceFee(200, "Premium").toFixed(2)}`);
 console.log(`Task 3 Part 2- Service Fee: $${calculateServiceFee(500, "Standard").toFixed(2)}`);
  
+//Task 4 - Car Rental Cost Calculation
+const calculateRentalCost = (days, carType, insurance = false) => {
+    let costamount = 0;
+//created a function calculate rental cars
+
+    if (carType === "Economy") {
+        costamount = 40;
+    } else if (carType === "Standard") {
+        costamount = 60;
+    } else if (carType === "Luxury") {
+        costamount = 100;
+    }
+    //assigned the car types to how much they costs
+
+    let totalCost = days * costamount;
+    if (insurance === true) {
+        totalCost += days * 20;
+    }
+    //added on insurance fee if they ahve one
+
+    return totalCost;
+};
+
+console.log(`Task 4 part 1- Total Rental Cost: $${calculateRentalCost(3, "Economy", true).toFixed(2)}`); 
+console.log(`Task 4 part 2- Total Rental Cost: $${calculateRentalCost(5, "Luxury", false).toFixed(2)}`); 
+//logged total rental costs 
