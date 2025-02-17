@@ -89,3 +89,18 @@ const filterLargeTransactions = (transactions, filterFunction) => {
 //created a function that retunrs transactions using filter method
 console.log("Task 6 - Transactions:", filterLargeTransactions(transactions, amount => amount > 1000));
 //logged results  
+
+//Task 7 - Shopping Cart Tracker.
+function createCartTracker() {
+    let total = 0;
+    return function(amount) {
+        total += amount;
+        console.log(`Task 7- Total Cart Value: $${total}`);
+    };
+}
+// used a function that retuns another one 
+// this is so it can add more onto the ongoing total
+let cart = createCartTracker();
+cart(20);
+cart(35); 
+//logged the results 
