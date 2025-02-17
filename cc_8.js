@@ -10,3 +10,14 @@ console.log(`Task 1 part 1- Net Salary: $${calculateSalary(5000, 500, 0.1).toFix
 console.log(`Task 1 part 2- Net Salary: $${calculateSalary(7000, 1000, 0.15).toFixed(2)}`); 
 //logged the two net salaries 
 
+
+//Task 2 - Product Price After Discount.
+let calculateDiscount = function(price, discountRate) {
+    let finalPrice = price - (price * discountRate);
+    return finalPrice;
+  };
+  //created a function that calculates the final price after discount 
+  
+  console.log(`Task 2 part 1- Final Price: $${calculateDiscount(100, 0.2).toFixed(2)}`); 
+  console.log(`Task 2 part 2- Final Price: $${calculateDiscount(250, 0.15).toFixed(2)}`);
+  //logged the final prices for task 2 
